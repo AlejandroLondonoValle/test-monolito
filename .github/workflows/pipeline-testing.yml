@@ -13,10 +13,10 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
-        - name: Revisar el codigo
+        - name: Revisar el codigo y pasarlo a ubuntu
           uses: actions/checkout@v3
 
-        - name: Prepara PHP
+        - name: Prepara e instala PHP en mi ambiente
           uses: shivammathur/setup-php@v2
           with:
             php-version: '8.3'
@@ -25,5 +25,5 @@ jobs:
             coverage: none
 
         - name: Saludar
-          run: php --version    
+          run: php -r "echo 'hola a todos, es un placer saludarlos';"   
 
